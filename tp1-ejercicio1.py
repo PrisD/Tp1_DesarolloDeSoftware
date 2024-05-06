@@ -1,6 +1,4 @@
 print("Inicio trabajo practico 1")
-
-# Solicitar números al usuario
 numero1 = int(input("Introduce la base/radicando: "))
 numero2 = int(input("Introduce el exponente/indice: "))
 
@@ -28,7 +26,6 @@ def raiz(radicando, indice):
         return 0
 
 
-# Imprimir los números introducidos por el usuario
 print("Resultado potencia: ", potencia(numero1, numero2))
 if raiz(numero1, numero2) == 0 or (raiz(numero1, numero2) == None) :
     print("No hay solución en Z para la raíz")

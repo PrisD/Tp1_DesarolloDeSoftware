@@ -13,7 +13,6 @@ def encontrarNPrimos(n):
     return lista
 
 
-# Ejemplo de uso
-n = int(input("Cuantos nro primos queres ??"))
+n = int(input("Cantidad requerida de N° primos: "))
 primos = encontrarNPrimos(n)
 print(f"Los primeros {n} números primos son: {primos}")

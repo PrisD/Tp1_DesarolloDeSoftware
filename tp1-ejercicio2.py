@@ -10,25 +10,26 @@ while ingreso != 0 :
     ingreso = int(input("Ingresa un número: "))
 
 
-def numMasAlto(listaNumeros):
+def extremosEnLista(listaNumeros):
     alto = listaNumeros[0]
-    for i in range(1, len(listaNumeros)): 
-        if alto < listaNumeros[i]:
-            alto = listaNumeros[i]
-    return alto
-
-def numMasBajo(listaNumeros):
     bajo = listaNumeros[0]
-    for i in range(1,len(listaNumeros)):
-        if bajo > listaNumeros[i]:
-            bajo =listaNumeros[i]
-    return bajo
 
+    for numero in listaNumeros:
+        if numero > alto:
+            alto = numero
+        elif numero < bajo:
+            bajo = numero
 
-print(listaPositivos)
-print(listaNegativos)
-print("El más alto de los positivos: ",numMasAlto(listaPositivos))
-print("El más alto de los negativos: ", numMasAlto(listaNegativos))
-print("El más bajo de los positivos: ", numMasBajo(listaPositivos))
-print("El más bajo de los negativos: ", numMasBajo(listaNegativos))
- 
+    return (alto, bajo)
+
+resultadoPositivos = extremosEnLista(listaPositivos)
+resultadoNegativos= extremosEnLista(listaNegativos)
+print("Para la lista de números positivos:")
+print(
+    f"Número más alto: {resultadoPositivos[0]}, Número más bajo: {resultadoPositivos[1]}"
+)
+
+print("Para la lista de números negativos:")
+print(
+    f"Número más alto: {resultadoNegativos[0]}, Número más bajo: {resultadoNegativos[1]}"
+)
