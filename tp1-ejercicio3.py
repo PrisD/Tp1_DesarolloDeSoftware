@@ -3,15 +3,16 @@ def encontrarNPrimos(n):
     numero = 2
     while len(lista) < n:
         primo = True
-        for i in range(2, numero):
-            if numero % i == 0:
+        divisor = 2
+        while divisor < numero:
+            if numero % divisor == 0:
                 primo = False
-                break
+            divisor += 1
+
         if primo:
             lista.append(numero)
         numero += 1
     return lista
-
 
 n = int(input("Cantidad requerida de N° primos: "))
 primos = encontrarNPrimos(n)

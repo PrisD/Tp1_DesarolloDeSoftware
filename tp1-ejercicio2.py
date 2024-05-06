@@ -13,7 +13,6 @@ while (len(listaNegativos) + len(listaPositivos)) != longitudVector    :
 def extremosEnLista(listaNumeros):
     alto = listaNumeros[0]
     bajo = listaNumeros[0]
-    print(listaNumeros)
     for numero in listaNumeros:
         if numero > alto:
             alto = numero
