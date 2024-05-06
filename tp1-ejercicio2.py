@@ -1,19 +1,19 @@
-ingreso = int(input("Ingresa un número: "))
+longitudVector =int(input("Ingresa longitud del vector: "))
 listaPositivos =[]
 listaNegativos =[]
 
-while ingreso != 0 :
+while (len(listaNegativos) + len(listaPositivos)) != longitudVector    :
+    ingreso = int(input("Ingresa un número: "))
     if ingreso < 0:
         listaNegativos.append(ingreso)
     else:
         listaPositivos.append(ingreso)
-    ingreso = int(input("Ingresa un número: "))
 
 
 def extremosEnLista(listaNumeros):
     alto = listaNumeros[0]
     bajo = listaNumeros[0]
-
+    print(listaNumeros)
     for numero in listaNumeros:
         if numero > alto:
             alto = numero
