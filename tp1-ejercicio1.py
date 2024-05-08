@@ -4,26 +4,30 @@ numero2 = int(input("Introduce el exponente/indice: "))
 
 
 def potencia(base, exponente):
+    resultado = 0
     if exponente == 0:
-        return 1    
+        resultado = 1    
     elif exponente < 0:
-        return 1 / (potencia(base, -exponente))
+        resultado = 1 / (potencia(base, -exponente))
     elif exponente % 2 != 0:
-        return potencia(base, exponente - 1) * base
+        resultado = potencia(base, exponente - 1) * base
     elif exponente % 2 == 0:
         y = potencia(base, exponente / 2)
-        return y * y
+        resultado = y * y
+    return resultado
 
 
 def raiz(radicando, indice):
+    resultado = 0
     if indice > 1:
         for i in range(radicando):
             if potencia(i, indice) == radicando:
-                return i
+                resultado = i
     elif indice == 1:
-        return radicando
+        resultado = radicando
     else:
-        return 0
+        resultado = 0
+    return resultado
 
 
 print("Resultado potencia: ", potencia(numero1, numero2))
